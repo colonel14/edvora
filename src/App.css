@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app__home {
   min-height: 100vh;
+  background: #292929;
+  padding: 43px 41px;
+  display: flex;
+  align-items: flex-start;
+}
+.app__filter {
+  width: 228px;
+  height: auto;
+  background: #131313;
+  border-radius: 15px;
+  padding: 25px 34.5px 25px 25px;
   display: flex;
   flex-direction: column;
+}
+.app__filter-title {
+  color: #a5a5a5;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cbcbcb;
+  margin-bottom: 35px;
+}
+.app__filter-select {
+  margin-bottom: 12.5px;
+}
+.app__filter-select input {
+  width: 100%;
+  background: #232323;
+  border-radius: 4.68775px;
+  padding: 8px 13px;
+  color: #fff;
+  font-size: 17px;
+  line-height: 20.29px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+::placeholder {
+  color: #fff;
+  font-size: 17px;
+}
+input::-webkit-calendar-picker-indicator {
+  opacity: 100;
+  color: #a5a5a5;
+}
+.app__filter-select datalist {
+  background: #131313;
+  height: 300px;
+  width: 100%;
+}
+.app__home-main {
+  margin-left: 35px;
+  flex: 1;
+  overflow: hidden;
+}
+.app__home-main_title {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 35px;
+  line-height: 42px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.app__home-main_subtitle {
+  margin: 21px 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.app__products-title {
+  color: #fff;
+  font-size: 20px;
+  line-height: 23px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(203, 203, 203, 0.5);
+}
+.app__products-content {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.app__products-container {
+  background: #131313;
+  /* padding: 20px; */
+  margin: 30px 0;
+  border-radius: 15px;
+  width: 100%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  display: flex;
+}
+.app__products-container::-webkit-scrollbar {
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
+.product__card {
+  margin: 20px 10px;
+  padding: 10px 12px;
+  background: #232323;
+  border-radius: 4.68775px;
+  transition: 0.5s ease;
+  min-width: 210px;
+}
+.product__card:hover {
+  transform: scale(1.1);
+}
+.product__card-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product__card-wrapper_img {
+  margin-right: 20px;
+}
+.product__card-wrapper_img img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product__card-wrapper_info {
+  width: 100%;
+}
+.product__card-wrapper_info h1 {
+  color: #fff;
+  font-size: 15px;
+}
+.product__card-wrapper_info p {
+  margin: 11.33px 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+}
+
+.product__card-wrapper_info span {
+  font-size: 13px;
+  color: #fff;
+}
+.product__card-address {
+  margin: 20px 0;
+}
+.product__card-address p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  line-height: 16px;
+}
+.product__card-label {
+  font-weight: bold;
+  font-size: 14px;
+}
+.product__card-desc {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 13px;
+}
+.app__products-arrows {
+  display: flex;
+}
+.product__arrow-icon {
+  cursor: pointer;
 }
